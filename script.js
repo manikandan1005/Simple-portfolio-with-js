@@ -1,4 +1,4 @@
-let navItem=["Home","About",'Service','Project','Contact'];
+let navItem=["Home","About",'Skill','Project','Contact'];
 let navBar=document.querySelector('.navBar');
 navItem.forEach(item=>{
     let aTag=document.createElement("a");
@@ -30,3 +30,14 @@ boxData.forEach(i=>{
     box.appendChild(boxTitle);
     itemBox.appendChild(box);
 });
+// skill data
+let frontEnd=document.querySelector('.frontEnd');
+let frontEndicons=[{'img':'assets/html.svg','text':'Html image'}];
+frontEndicons.forEach(i=>{
+    let iconImg=document.createElement('img');
+    iconImg.src=i.img;
+    iconImg.title=i.text;
+    iconImg.height=100;
+    iconImg.width=100;
+    frontEnd.appendChild(iconImg);
+})

@@ -16,6 +16,9 @@ body{
   font-weight: 400;
   font-style: normal;
 }
+.mt-1{
+    margin: 7px 0 12px 0;
+}
 .flx{
     display: flex;
     gap: 3rem;
@@ -92,7 +95,7 @@ nav .navBtn i{
 }
 /* section tope size changing or not hide in nav to a-tag go to section */
 section{
-    padding: 6rem 0 2rem;
+    padding: 9rem 0 2rem;
 }
 /* home----------------- */
 #Home h1{
@@ -179,11 +182,12 @@ section{
    justify-content: center;
    /* background-color: red; */
    padding: 10px;
-}
+
 img{
     height: 100%;
     width: 300px;
     border-radius: 15px;
+}
 }
 /*Home btns-------------*/
 #Home .btn{
@@ -198,7 +202,7 @@ img{
     border-radius:27px ;
     font-size: 19px;
     a{
-        color: #fff;
+        color: #000;
     }
     &:hover{
         box-shadow: 0 0 27px #1bffff;
@@ -211,7 +215,7 @@ img{
 }
     &:nth-child(2){
         background-color: #1bffff;
-        color: #000;
+       
 }}
 .socialMediaIcon {
     margin:18px ;
@@ -243,3 +247,35 @@ img{
 
     }
 }
+/*title text for section like abt,exp,skill,.. ------------ */
+.titleText{
+    color: #1bffff;
+
+}
+#About{
+   flex-direction: column;
+}
+#About .abtContainer{
+    justify-content: space-evenly;
+    .abtContent p{
+        margin: 5px 0;
+        text-align: start;
+    }
+}
+.abtBox{
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 22px;
+}
+.abtContainer .education{
+    display: flex;
+    text-align: start; gap: 2rem;
+    padding: 10px;
+    background-color: rgb(41, 40, 40);
+}
+.abtContainer .education     i{
+    display: flex;
+        justify-content: center;
+       align-items: center;
+       padding: 5px 0;
+    }

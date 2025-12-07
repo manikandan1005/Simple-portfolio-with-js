@@ -46,15 +46,17 @@ body{
         justify-content: space-evenly;
     }
 }
-nav h1{
+nav {
+    padding: 10px;
+    h1{
     color: aqua;
-    
+    }
     /* text-shadow: (1px 1px 10px 6px #e93fe9); */
 }
 .navBar{
-    background-color: rgb(27, 24, 24);
-    
-    padding: 0;
+    /* background-color: rgb(27, 24, 24); */
+    width:40% !important ;
+    /* padding: 5px; */
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -65,14 +67,17 @@ nav h1{
         color: aqua;
         text-align: center;
         width: 95px;
-        padding: 20px 0;
+        padding:13px  0;
+        margin: 7px;
         border-radius: 8px;
+        border-radius: 0;
     }
 }
 .navBar a:hover{
-    background: linear-gradient(45deg,#2e3192,#1bffff);
+    /* background: linear-gradient(45deg,#2e3192,#1bffff); */
     /* text-shadow: (10px 10px 10px 6px #e93fe9); */
     color: #fff;
+    border-bottom:2px solid aqua ;
     transition: linear .6s;
     
 }
@@ -90,7 +95,7 @@ nav .navBtn i{
     font-size: 25px;
 }
 .body_container{
-    margin: 0 15% ;
+    margin: 0 10% ;
     padding: 15px;
 }
 /* section tope size changing or not hide in nav to a-tag go to section */
@@ -184,8 +189,8 @@ section{
    padding: 10px;
 
 img{
-    height: 100%;
-    width: 300px;
+    height: 660px;
+    width: 340px;
     border-radius: 15px;
 }
 }
@@ -358,4 +363,60 @@ body{
 }
 #Skill .categorySet img{
     margin: 13px 13px 0 0;
+}
+/* project section */
+#Project{
+    display: flex;
+    flex-direction: column;
+}
+/* #Project .items{
+    display: flex;
+    width: 100%;
+} */
+#Project .projectLists {
+    display: flex;
+    text-align: start;
+    gap:  100px;
+    padding: 5px 10px;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    margin: 25px 0 8px 0;
+    align-items: center;
+    justify-content: center;
+     width: 100%;
+    
+}
+.projectLists .items{
+    height: 350px;
+    width: 300px;
+    /* margin: 15px; */
+     border-radius: 1px solid #1bffff;
+}
+.projectLists .items img{
+    height: 150px !important;
+    width: 100%;
+    object-fit: cover
+}
+.projectLists .items h4,
+.projectLists .items p{
+    color: #1bffff;
+    margin-top: 7px;
+}
+.demoBtns{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    /* height: 100%; */
+}
+.demoBtns a{
+    display: flex;
+    
+    background-color:   #000;
+    padding: 10px 20px;
+    /* margin-top: 30px; */
+    /* margin: 20px 15px 10px 5px; */
+    border-radius: 5px;
+    border: 1px solid #1bffff;
+    color: #1bffff;
 }

@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 a{
      text-decoration: none;
 }
@@ -15,6 +18,7 @@ body{
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  display: flex;
 }
 .mt-1{
     margin: 7px 0 12px 0;
@@ -81,7 +85,7 @@ nav {
     transition: linear .6s;
     
 }
-nav .navBtn p{
+nav .navBtn a{
     right: 0px;
     background-color: aqua;
     border-radius: 20px;
@@ -161,7 +165,7 @@ section{
   .itemBox  div{
     height: 150px;
     width: 150px;
-    background-color:  rgb(27, 24, 24);
+    /* background-color:  rgb(27, 24, 24); */
     border-radius: 15px;
     border: 2px;
     display: flex;
@@ -170,9 +174,11 @@ section{
     justify-content: center;
     gap: 4px;
      margin: 10px 24px;
+     color: #1bffff;
      &:hover{
     border: 2px solid rgb(3, 250, 250);
     box-shadow: 1px 1px 10px 6px #e93fe9;
+    color: #fff;
     
      }
 } 
@@ -235,7 +241,7 @@ img{
         font-size: 30px;
         color: #1bffff;
         /* Social media icon coller change in hove --------------------------- */
-        &:first-child{
+        /* &:first-child{
             &:hover{
             color: navy;
         }
@@ -254,7 +260,7 @@ img{
             &:hover{
                 color: #fff;
             }
-         }
+         } */
 
     }
 }
@@ -278,6 +284,7 @@ img{
     flex-direction: column;
     gap: 22px;
     margin-top: 22px;
+    color: #1bffff;
 }
 .abtContainer .education{
     display: flex;
@@ -460,6 +467,7 @@ body{
     margin: 15px;
     text-align: center;
     display: flex;
+    gap: 10px;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
@@ -519,9 +527,13 @@ body{
         text-align: start;
         /* height:  100vh; */
         gap: 10px;
+         p,h1{
+            color: black;
+        }
         img{
         width: 100%;
         height: 450px;
+       
     }
     }
 #projectView{
@@ -533,3 +545,138 @@ body{
 .none{
     display: none;
 }
+
+/* footer------------- */
+footer>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 120px;
+}
+footer>div>div{
+    display: flex;
+    gap: 14px;
+}
+
+footer>div .name{
+    flex-direction: column;
+}
+footer>div p{
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+
+  .body_container {
+    margin: 0 5%;
+  }
+
+  .homeDivBox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homeDivBox .div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .d1 img {
+    height: 500px;
+    width: auto;
+  }
+
+  .navBar {
+    width: 60% !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    /* flex-direction: column; */
+    gap: 10px;
+    .navBar{
+        display: none;
+    }
+  }
+
+  .navBar {
+    width: 100% !important;
+    /* flex-wrap: wrap; */
+  }
+
+  #Home h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  #roleText {
+    font-size: 20px;
+    justify-content: center;
+  }
+
+  .itemBox {
+    flex-direction: column;
+  }
+
+  .itemBox div {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .abtContainer {
+    flex-direction: column;
+  }
+
+  .abtContainer .img {
+    width: 250px;
+    height: 450px;
+  }
+
+  .abtContainer .img img {
+    width: 240px;
+    height: 440px;
+  }
+
+  .projectLists {
+    gap: 30px;
+  }
+
+  .projectLists .items {
+    width: 90%;
+  }
+
+  .get {
+    width: 90%;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  #Home h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .socialMediaIcon a {
+    font-size: 22px;
+    margin: 0 10px;
+  }
+
+  #Home div > button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  footer > div {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+
+}
+

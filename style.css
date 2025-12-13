@@ -658,12 +658,12 @@ footer>div p{
 @media (max-width: 480px) {
 
   #Home h1 {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
     text-align: center;
   }
 
   .socialMediaIcon a {
-    font-size: 22px;
+    /* font-size: 22px; */
     margin: 0 10px;
   }
 

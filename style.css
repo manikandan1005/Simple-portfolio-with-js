@@ -377,6 +377,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: start;
+    flex-wrap: wrap;
 }
 #Skill .categorySet img{
     margin: 13px 13px 0 0;
@@ -600,6 +601,9 @@ footer>div p{
     .navBar{
         display: none;
     }
+    .navBtn a{
+        padding: 8px 10px;
+    }
   }
 
   .navBar {
@@ -610,6 +614,12 @@ footer>div p{
   #Home h1 {
     font-size: 2.2rem;
     text-align: center;
+  }
+  #Home .HomeImg{
+    display: none !important;
+    /* width: 333px;
+    height: 400px;
+    box-shadow:1px 1px 10px 6px aqua; */
   }
 
   #roleText {
@@ -639,6 +649,10 @@ footer>div p{
     width: 240px;
     height: 440px;
   }
+ #Skill .categorySet img{
+    height: 50px;
+    width: 50px;
+}
 
   .projectLists {
     gap: 30px;

@@ -76,9 +76,9 @@ skills.forEach(skillName=>{
     let div=document.createElement('div');
     
     let title=document.createElement('h3');
-    title.classList="blinkText"
+    title.classList="blinkText scroll"
     let categorySet=document.createElement('div')
-    categorySet.className = "categorySet";
+    categorySet.className = "categorySet ";
     //  
     // let iconImg=document.createElement('img');
     // title.textContent=i.category
@@ -94,12 +94,14 @@ skills.forEach(skillName=>{
     div.appendChild(title);
     skillName.skillImgs.forEach(icon=>{
         let iconImg=document.createElement('img');
-        
+        let div=document.createElement("div");
+        div.className="scroll";
         iconImg.src=icon.img;
         iconImg.title=icon.name;
         iconImg.height=80;
         iconImg.width=80;
-        categorySet.appendChild(iconImg);
+        div.appendChild(iconImg);
+        categorySet.appendChild(div);
         // div.appendChild(categorySet);
 
         
@@ -178,7 +180,7 @@ let projects = [
   {
     id: 7,
     name: 'Actodo Project',
-    link: 'https://actodo-pro.vercel.app/',
+    link: 'https://actodo.vercel.app/',
     git: '',
     content: 'Developed a clean and simple to-do list web app using JavaScript. Implemented DOM operations to add, delete, and organize tasks instantly. Focused on logic building, array manipulation, and creating an intuitive interface with Bootstrap styling. Designed to give users quick and responsive task management.',
     tool: 'HTML 5, CSS, JS, Bootstrap',
@@ -216,7 +218,7 @@ let projects = [
 let projectLists =document.querySelector('.projectLists');
 projects.forEach((list)=>{
   let itemsContainer=document.createElement('div');
-  itemsContainer.className="items";
+  itemsContainer.className="items scroll";
     itemsContainer.innerHTML=`
       <img src="${list.img}" alt="${list.name}">
                 <h4>${list.name}</h4>
@@ -245,7 +247,7 @@ function project(id){
    projectexp.style.display="block";
    projectexp.innerHTML=`
           
-            <i class="fa-solid fa-xmark blinkText" onclick="closeProject()"></i>
+            <i class="fa-solid fa-xmark blinkText scroll" onclick="closeProject()"></i>
             <div class=" content ">
                 <img src="${data.img}" alt="${data.name}">
                 <h1>${data.name}</h1>

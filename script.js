@@ -121,7 +121,7 @@ let projects = [
   git: 'https://github.com/manikandan1005/React-E-Commerce-App',
   content: 'Designed and developed a modern, fully responsive landing page for a cake and pastry brand using React. Built reusable and well-structured components with a clean UI architecture. Implemented interactive sections such as Featured Products, Menu, Special Offers, and Contact. Ensured a mobile-first responsive layout with Tailwind CSS. Improved user experience through smooth animations, dynamic UI interactions, and optimized component rendering.',
   tool: 'React, JavaScript, JSX, CSS, Tailwind CSS',
-  img: 'assets/projectImg/coc.png'
+  img: 'assets/projectImg/CreamStones.png'
 },
   {
     id: 1,

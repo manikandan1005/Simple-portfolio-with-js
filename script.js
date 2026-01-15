@@ -114,15 +114,15 @@ skills.forEach(skillName=>{
 
 // project data ------
 let projects = [
-  {
-    id: 0,
-    name: 'Cup-of-Cakes',
-    link: 'https://cup-of-cakes.vercel.app/',
-    git: 'https://github.com/manikandan1005/Cup-Of-Cakes-',
-    content: 'Developed a modern and fully responsive landing page for a cake and pastry brand using React. Implemented reusable components, optimized layouts, and interactive sections such as Featured Products, Menu, Offers, and Contact. Ensured mobile-first responsiveness using Bootstrap and custom CSS. Enhanced user experience with smooth animations, dynamic UI updates, and clean component architecture.',
-    tool: 'React, HTML 5, CSS, Bootstrap, JavaScript',
-    img: 'assets/projectImg/coc.png'
-  },
+ {
+  id: 0,
+  name: 'Cream Stones',
+  link: 'https://react-cream-stones.vercel.app/',
+  git: 'https://github.com/manikandan1005/React-E-Commerce-App',
+  content: 'Designed and developed a modern, fully responsive landing page for a cake and pastry brand using React. Built reusable and well-structured components with a clean UI architecture. Implemented interactive sections such as Featured Products, Menu, Special Offers, and Contact. Ensured a mobile-first responsive layout with Tailwind CSS. Improved user experience through smooth animations, dynamic UI interactions, and optimized component rendering.',
+  tool: 'React, JavaScript, JSX, CSS, Tailwind CSS',
+  img: 'assets/projectImg/coc.png'
+},
   {
     id: 1,
     name: 'Business Websites',
@@ -212,6 +212,15 @@ let projects = [
     content: 'Built a Student List Management system using Angular, featuring add, edit, delete, and search functionalities. Implemented form validation, reactive updates, Bootstrap tables, and a clean UI. Focused on Angular component communication, TypeScript handling, and smooth CRUD operation design.',
     tool: 'Angular, TypeScript, Bootstrap',
     img: 'assets/projectImg/student.png'
+  },
+    {
+    id: 11,
+    name: 'Cup-of-Cakes',
+    link: 'https://cup-of-cakes.vercel.app/',
+    git: 'https://github.com/manikandan1005/Cup-Of-Cakes-',
+    content: 'Developed a modern and fully responsive landing page for a cake and pastry brand using React. Implemented reusable components, optimized layouts, and interactive sections such as Featured Products, Menu, Offers, and Contact. Ensured mobile-first responsiveness using Bootstrap and custom CSS. Enhanced user experience with smooth animations, dynamic UI updates, and clean component architecture.',
+    tool: 'React, HTML 5, CSS, Bootstrap, JavaScript',
+    img: 'assets/projectImg/coc.png'
   }
 ];
 

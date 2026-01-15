@@ -1,79 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <style>
-    .project-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.7);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+  #Project{
+    display: flex;
+    flex-direction: column;
 }
-
-.modal-content {
-  background-color: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  max-width: 700px;
-  width: 90%;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+/* #Project .items{
+    display: flex;
+    width: 100%;
+} */
+#Project .projectLists {
+    display: flex;
+    text-align: start;
+    gap:  100px;
+    padding: 5px 10px;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    margin: 25px 0 8px 0;
+    align-items: center;
+    justify-content: center;
+     width: 100%;
+    
 }
-
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 25px;
-  cursor: pointer;
+.projectLists .items{
+    /* height: 350px; */
+    width: 320px;
+    padding: 7px;
+    /* margin: 15px; */
+    border-radius: 5px;
+     border: 1px solid #1bffff;
+     box-shadow: 1px 1px 10px 6px #e93fe9;
 }
-
-.modal-image img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
+.projectLists .items:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 10px 6px #1bffff;
 }
+.projectLists .items img{
+    height: 150px !important;
+    width: 100%;
+    object-fit: cover;
 
-.tech-stack span {
-  display: inline-block;
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 5px 10px;
-  margin: 5px;
-  border-radius: 5px;
-  font-size: 13px;
 }
-
+.projectLists .items h4,
+.projectLists .items p{
+    color: #1bffff;
+    margin-top: 7px;
+}
+.demoBtns{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    /* height: 100%; */
+}
+.items button , .demoBtns a {
+    display: flex;
+    margin:7px;
+    background-color:   #000;
+    padding: 10px 20px;
+    /* margin-top: 30px; */
+    /* margin: 20px 15px 10px 5px; */
+    border-radius: 5px;
+    border: 1px solid #1bffff;
+    color: #1bffff;
+    &:hover{
+        background-color: #1ebe57;
+        color: white;
+        border: 2px solid white;
+    }
+}
+section{
+    padding: 6rem 0 2rem;
+}
 </style>
 <body>
-    <div class="project-modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>Project Name</h2>
-    <div class="modal-image">
-        <img src="assets/projectImg/coc.png" alt="Project Image">
-    </div>
-    <p>Full description of the project, features, challenges, and what technologies were used.</p>
-    <div class="tech-stack">
-        <span>React</span>
-        <span>Bootstrap</span>
-        <span>CSS</span>
-    </div>
-    <div class="modal-buttons">
-        <a href="#" target="_blank">Demo</a>
-        <a href="#" target="_blank">GitHub</a>
-    </div>
-  </div>
-</div>
 
+  
+<script >
+  let projects = [
+  {
+    id: 0,
+    name: 'Cup-of-Cakes',
+    link: 'https://cup-of-cakes.vercel.app/',
+    git: 'https://github.com/manikandan1005/Cup-Of-Cakes-',
+    content: 'Developed a modern and fully responsive landing page for a cake and pastry brand using React. Implemented reusable components, optimized layouts, and interactive sections such as Featured Products, Menu, Offers, and Contact. Ensured mobile-first responsiveness using Bootstrap and custom CSS. Enhanced user experience with smooth animations, dynamic UI updates, and clean component architecture.',
+    tool: 'React, HTML 5, CSS, Bootstrap, JavaScript',
+    img: 'assets/projectImg/coc.png'
+  },
+  {
+    id: 1,
+    name: 'Business Websites',
+    link: 'https://nostra-e-commerce.netlify.app/',
+    git: 'https://github.com/manikandan1005/Nostra-Ecommerce.git',
+    content: 'Designed and developed a professional multi-section business/e-commerce website focusing on UI structure, grid layouts, and mobile-first design. Implemented product sections, testimonial carousel, hero banner, and call-to-action components. Enhanced visual appeal using CSS animations and ensured consistency across all screen sizes.',
+    tool: 'HTML 5, CSS, JS, Bootstrap',
+    img: 'assets/projectImg/Nostra project.png'
+  },
+  {
+    id: 2,
+    name: 'Employee Management System',
+    link: 'https://ems-in-js-crud.vercel.app/',
+    git: 'https://github.com/manikandan1005/Employee-Management-System-Angular.git',
+    content: 'Created a complete Employee Management System with CRUD functionalities including add, update, delete, and search. Built using pure JavaScript with form validation, dynamic table rendering, and clean UI components. Focused on DOM manipulation, modular code structure, and real-time data updates for improved usability.',
+    tool: 'HTML, CSS, JavaScript, Bootstrap',
+    img: 'assets/projectImg/EMS-JS.png'
+  },
+  {
+    id: 3,
+    name: 'Task Management System',
+    link: '',
+    git: 'https://github.com/manikandan1005/Angular-Todo-.git',
+    content: 'Developed a task management app using Angular with features like add, delete, and persist tasks using localStorage. Implemented component-based architecture, TypeScript logic handling, and Bootstrap-based responsive UI. The app offers a smooth and minimal interface designed for easy daily task tracking.',
+    tool: 'Angular, TypeScript, Bootstrap',
+    img: 'assets/projectImg/Todo.png'
+  },
+  {
+    id: 4,
+    name: 'Udemy Clone',
+    link: '',
+    git: 'https://github.com/manikandan1005/udemy-clone',
+    content: 'Cloned the Udemy homepage to understand and replicate real-world website design structures. Focused on advanced layout techniques using Flexbox and CSS Grid, navigation design, hero banner styling, and course-card UI patterns. Practiced responsive web design and improved pixel-perfect layout replication skills.',
+    tool: 'HTML 5, CSS, JS, Bootstrap',
+    img: 'assets/projectImg/udemy.png'
+  },
+  {
+    id: 5,
+    name: 'Shop Sphere',
+    link: '',
+    git: '',
+    content: 'Built a modern e-commerce web application using Angular with key features like product browsing, add-to-cart, and checkout flow. Implemented Angular Router for multi-page navigation and reusable components for product cards and cart UI. Focused on clean UI, state handling, and improved performance with optimized Angular structure.',
+    tool: 'Angular, TypeScript, Angular Router, Bootstrap',
+    img: 'assets/projects/shopsphere.png'
+  },
+  {
+    id: 6,
+    name: 'Greenden',
+    link: 'https://vignesh-vc.github.io/greenden/',
+    git: '',
+    content: 'Created a visually appealing landing page for a green eco-friendly business. Included hero sections, product displays, promotional banners, and CTA buttons. Ensured lightweight performance, fast load time, and cross-device compatibility using Bootstrap and optimized images.',
+    tool: 'HTML 5, CSS, JS, Bootstrap',
+    img: 'assets/projectImg/Greenden.png'
+  },
+  {
+    id: 7,
+    name: 'Actodo Project',
+    link: 'https://actodo.vercel.app/',
+    git: '',
+    content: 'Developed a clean and simple to-do list web app using JavaScript. Implemented DOM operations to add, delete, and organize tasks instantly. Focused on logic building, array manipulation, and creating an intuitive interface with Bootstrap styling. Designed to give users quick and responsive task management.',
+    tool: 'HTML 5, CSS, JS, Bootstrap',
+    img: 'assets/projectImg/actodo.png'
+  },
+  {
+    id: 8,
+    name: 'Weather Prediction',
+    link: 'https://weatherapi-webapp.vercel.app/',
+    git: '',
+    content: 'Built a weather forecast application using OpenWeatherMap API. Users can search any city to get real-time temperature, humidity, and weather conditions. Implemented dynamic API calls with error handling, loading states, and responsive weather cards for smooth UX across devices.',
+    tool: 'HTML 5, CSS, JS, Bootstrap',
+    img: 'assets/projectImg/Weather .png'
+  },
+  {
+    id: 9,
+    name: 'Registration Form',
+    link: 'https://registration-form-vc.netlify.app/',
+    git: '',
+    content: 'Created a fully responsive registration form with input validations, success/error messages, and user-friendly design. Focused on form validation logic, accessibility, proper label usage, and smooth mobile responsiveness with Bootstrap styling.',
+    tool: 'HTML 5, CSS, JS, Bootstrap',
+    img: 'assets/projectImg/Registration .png'
+  },
+  {
+    id: 10,
+    name: 'Student List Management',
+    link: 'https://student-git-main-manikandans-projects-6d1ddc35.vercel.app/',
+    git: 'https://github.com/manikandan1005/student.git',
+    content: 'Built a Student List Management system using Angular, featuring add, edit, delete, and search functionalities. Implemented form validation, reactive updates, Bootstrap tables, and a clean UI. Focused on Angular component communication, TypeScript handling, and smooth CRUD operation design.',
+    tool: 'Angular, TypeScript, Bootstrap',
+    img: 'assets/projectImg/student.png'
+  }
+];
+
+let projectLists =document.querySelector('.projectLists');
+projects.forEach((list)=>{
+  let itemsContainer=document.createElement('div');
+  itemsContainer.className="items scroll";
+    itemsContainer.innerHTML=`
+      <img src="${list.img}" alt="${list.name}">
+                <h4>${list.name}</h4>
+                <button onclick="project(${list.id})">Explore</button>
+                                
+
+    `;
+  projectLists.append(itemsContainer);
+
+})
+</script>
 </body>
+
+
 </html>
